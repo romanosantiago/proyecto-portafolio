@@ -1,0 +1,39 @@
+@mixin flex ($flex, $direction, $justify, $align) { 
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin text-style ($size, $weight, $height, $spacing) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+%scale {
+    transition: all 0.8s;
+    &:hover {
+        color: $hover-color;
+        transform: scale(1.3);
+    }
+}
+%font-family {
+    font-family: 'poppins';
+}
+
+%margin-padding {
+    margin: 0;
+    padding: 0;
+}
+
+%button-sobre-mi-contacto {
+    padding: 0.8em;
+    background: none;
+    color: $text-color;
+    text-transform: uppercase;
+    border-color: nth($colores, 1);
+    &:hover {
+        background: nth($bg-color, 6);
+    }
+}

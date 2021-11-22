@@ -1,0 +1,87 @@
+.carousel {
+    height: 30vh;
+    .item-social {
+        height: 30vh;
+        @include flex (flex, column, center, center);
+        padding: 1em;
+        li {
+            display: inline;
+            margin-right: 2em;
+            margin-left: 2em;
+            i {
+                font-size: 1.5em;
+                color: white;
+                @extend %scale;
+            }
+        }
+    }
+    .item-sobre-mi {
+        @include flex (flex, column, center, center);
+        height: 30vh;
+        color: $text-color;
+        button {
+            @extend %button-sobre-mi-contacto;
+        }
+    }
+    .item-contacto {
+        @include flex (flex, column, center, center);
+        height: 30vh;
+        padding: 1em;
+        button {
+            @extend %button-sobre-mi-contacto;
+        }
+    }
+
+    .modal-sobre-mi, .modal-contacto {
+        height: 100vh;
+        .modal-content {
+            padding: 1em;
+            background-color: nth($bg-color, 5);
+            .sobre-mi-content {
+                height: auto;
+                @include flex (flex, column, space-between, center);
+                background-color: nth($bg-color, 5);
+                h3 {
+                    @include text-style (2em, 800, none, auto);
+                    text-transform: uppercase;
+                }
+                p {
+                    @include text-style (1em, 200, none, auto);
+                    a {
+                        text-decoration: underline;
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+                button {
+                    width: 100%;
+                }
+            }
+            .contact-content {
+                @include flex (flex, row, center, center);
+                color: $text-color;
+                @include text-style (1em, 200, none, auto);
+                flex-wrap: wrap;
+                .contact {
+                    margin: 2em;
+                    @include flex (flex, column, center, center);
+                    text-align: center;
+                    a {
+                        text-decoration: underline;
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                    i {
+                        font-size: 2em;
+                        margin: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

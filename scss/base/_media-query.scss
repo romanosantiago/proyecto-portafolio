@@ -1,0 +1,28 @@
+@media screen and (max-width:468px) {
+    .main-title {
+        h1 {
+            font-size: 3em!important;
+        }
+    }
+    .social {
+        i {
+            margin-left: 1em !important;
+            margin-right: 1em !important;
+        }
+    }
+    .filter-img {
+        h3 {
+            font-size: 1.5em !important;
+        }
+        h4 {
+            font-size: 1em!important;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .list-footer {
+        margin-bottom: 2em;
+        @include flex (flex, column, center, flex-start!important);
+    }
+}

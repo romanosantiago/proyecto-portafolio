@@ -1,0 +1,112 @@
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 10vh;
+    background-color:nth($bg-color, 6);
+    @include flex (flex, row, space-between, center);
+    overflow: hidden;
+    .logo {
+        margin-left: 2em;
+        @extend %font-family;
+        color: $text-color;
+        a {
+            @include text-style (1.5em, 800, auto, none);
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+    .menu-icon {
+        margin-right: 2em;
+        button {
+            background: none;
+            border: none;
+            @extend %scale;
+            i {
+                color: $text-color;
+                font-size: 2em;
+            }
+        }
+        .offcanvas-content {
+            background-color:nth($bg-color, 6);
+            width: 300px;
+            color: $text-color;
+            .offcanvas-header {
+                @extend %margin-padding;
+                @include flex (flex, row, space-between, center);
+                height: 10vh;
+                h5 {
+                    @include text-style (1.5em, 800, 0, none);
+                    text-transform: uppercase;
+                    margin-left: 2rem;
+                    margin-bottom: 0;
+                    @extend %scale;
+                    a {
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+                button {
+                    color: $text-color;
+                    margin-right: 2rem;
+                    i {
+                        @extend %scale;
+                    }
+                }
+            }
+            .offcanvas-body {
+                @include flex(flex,column, space-between, flex-start);
+                padding: 2em;
+                nav {
+                    @include flex (flex, column, none, flex-start);
+                    button {
+                        color: $text-color;
+                        @include text-style (1.5em, 800, 3em, 0.1em);
+                        text-transform: uppercase;
+                        transition: all 0.8s;
+                        background: none;
+                        border: none;
+                        &:hover {
+                            color: $hover-color;
+                            text-decoration: line-through;
+                            transform: translateX(-0.5em);
+                        }
+                    }
+                    a {
+                        @include text-style (1.5em, 800, 3em, 0.1em);
+                        text-transform: uppercase;
+                        transition: all 0.8s;
+                        &:hover {
+                            color: $hover-color;
+                            text-decoration: line-through;
+                            transform: translateX(-0.5em);
+                        }
+                    }
+                }
+                ul {
+                    @extend %margin-padding;
+                    li {
+                        display: inline;
+                        a {
+                            margin-right: 2em;
+                            &:hover {
+                                color: $hover-color;
+                            }
+                            i {
+                                font-size: 1.5em;
+                                @extend %scale;
+                            }
+                        }
+                    }
+                }
+                .copy {
+                    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+                    @include text-style (1em, 200, 2em, auto);
+                    color: grey;
+                }
+            }
+        }
+    }
+}

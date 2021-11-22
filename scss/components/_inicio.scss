@@ -1,0 +1,20 @@
+.inicio {
+    height: 100vh;
+    @extend %font-family;
+    overflow-x: hidden;
+    .main-title {
+        @include flex (flex, column, center, center);
+        color: $text-color;
+        height: 70vh;
+        padding-top: 10vh;
+        width: 100%;
+        text-align: center;
+        h1 {
+            @include text-style (5em, 800, none, auto);
+        }
+        h2 {
+            @include text-style (1.5em, 200, none, auto);
+        }
+    }
+}
+

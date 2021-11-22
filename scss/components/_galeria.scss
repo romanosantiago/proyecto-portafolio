@@ -1,0 +1,95 @@
+#galeria {
+    background-color: nth($bg-color, 5);
+    @include flex (flex, column, center, center);
+    padding-top: 4em;
+    padding-bottom: 4em;
+    .row {
+        margin: 0;
+    }
+    .proyecto {
+        color: $text-color;
+        @extend %font-family;
+        padding: 1em;
+        .button-open {
+            cursor: pointer;
+            @include flex (flex, column, center, center);
+            position: relative;
+            .filter-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: nth($bg-color, 3);
+                @include flex (flex, column, center, center);
+                text-align: center;
+                h3 {
+                    @include text-style (2em, 800, none, auto);
+                }
+                h4 {
+                    @include text-style (1.5em, 200, none, auto);
+                }
+                &:hover {
+                    transition: all 0.8s;
+                    opacity: 0;
+                }
+            }
+        }
+        .modal-content {
+            @include flex (flex, row, none, none);
+            .iframe {
+                @extend %margin-padding;
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .modal-body {
+                background-color: nth($bg-color, 5);
+                @include flex (flex, column, space-between, none);
+                h3 {
+                    @include text-style (2rem, 800, auto, auto);
+                    text-transform: uppercase;
+                    margin-bottom: 1rem;
+                }
+                h4 {
+                    @include text-style (1.5rem, 200, auto, auto);
+                }
+                p {
+                    margin-top: 2rem;
+                    margin-bottom: 4rem;
+                    font-weight: 100;
+                }
+                .botones {
+                    @include flex (flex, row, flex-end, center);
+                    color: nth($bg-color, 5);
+                    font-weight: 800;
+                    .visitar {
+                        @include text-style (1rem, 400, 5px, 0);
+                        a {
+                            background-color: nth($bg-color, 1);
+                            padding: 0.8rem;
+                            &:hover {
+                                color: inherit;
+                                background-color: $hover-color;
+                            }
+                        }
+                        &:hover {
+                            transform: scale(1.03);
+                            transition: all 0.5s;
+                        }
+                    }
+                    button {
+                        background-color:nth($bg-color, 1);
+                        border: none;
+                        margin-left: 2rem;
+                        font-size: 2rem;
+                        &:hover {
+                            transform: scale(1.03);
+                            transition: all 0.5s;
+                            background-color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

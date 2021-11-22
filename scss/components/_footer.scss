@@ -1,0 +1,25 @@
+#contacto {
+    background-color: nth($bg-color, 6);
+    height: auto;
+    padding: 2rem;
+    font-family: 'poppins';
+    color: $text-color;
+    .contacto-footer {
+        @include flex (flex, row, center, flex-start);
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        h4 {
+            @include text-style (1.5rem, 800, auto, auto);
+        }
+
+        a {
+            @include text-style (1rem, 200, 2em, auto);
+            &:hover {
+                color: $hover-color;
+            }
+        }
+        .list-footer {
+            @include flex (flex, column, flex-start, center);
+        }
+    }
+}

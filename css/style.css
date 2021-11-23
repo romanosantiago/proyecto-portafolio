@@ -226,13 +226,19 @@ header .menu-icon .offcanvas-content .offcanvas-body .copy {
 .carousel {
   height: 30vh;
 }
+.carousel .carousel-indicators [data-bs-target] {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 1em;
+  margin-left: 1em;
+}
 .carousel .item-social {
   height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
 }
 .carousel .item-social li {
   display: inline;
@@ -257,7 +263,6 @@ header .menu-icon .offcanvas-content .offcanvas-body .copy {
   justify-content: center;
   align-items: center;
   height: 30vh;
-  padding: 1em;
 }
 .carousel .modal-sobre-mi, .carousel .modal-contacto {
   height: 100vh;
@@ -492,6 +497,11 @@ header .menu-icon .offcanvas-content .offcanvas-body .copy {
 @media screen and (max-width: 468px) {
   .main-title h1 {
     font-size: 3em !important;
+  }
+}
+@media screen and (max-width: 468px) {
+  .main-title h1 {
+    font-size: 4em !important;
   }
 
   .social i {

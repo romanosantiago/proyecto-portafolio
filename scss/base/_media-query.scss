@@ -4,6 +4,13 @@
             font-size: 3em!important;
         }
     }
+}
+@media screen and (max-width:468px) {
+    .main-title {
+        h1 {
+            font-size: 4em!important;
+        }
+    }
     .social {
         i {
             margin-left: 1em !important;

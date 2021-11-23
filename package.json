@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanosantiago/proyecto-portafolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romanosantiago/proyecto-portafolio/issues"
+  },
+  "homepage": "https://github.com/romanosantiago/proyecto-portafolio#readme",
   "description": ""
 }

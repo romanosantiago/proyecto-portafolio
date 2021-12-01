@@ -5,8 +5,7 @@
     .main-title {
         @include flex (flex, column, center, center);
         color: $text-color;
-        height: 70vh;
-        padding-top: 10vh;
+        height: 60vh;
         width: 100%;
         text-align: center;
         h1 {
@@ -15,6 +14,9 @@
         h2 {
             @include text-style (1.5em, 200, none, auto);
         }
+    }
+    .sobre-mi {
+        height: 40vh;
     }
 }
 

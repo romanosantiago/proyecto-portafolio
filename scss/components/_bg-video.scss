@@ -7,8 +7,7 @@
         object-fit: cover;
     }
     .filtro-video {
-        padding: 2em;
-        position: absolute;
+        position: fixed;
         background-color: nth($bg-color, 3);
         z-index: -1;
         width: 100%;

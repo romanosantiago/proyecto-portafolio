@@ -60,8 +60,7 @@ body {
   object-fit: cover;
 }
 .bg-video .filtro-video {
-  padding: 2em;
-  position: absolute;
+  position: fixed;
   background-color: #00000099;
   z-index: -1;
   width: 100%;

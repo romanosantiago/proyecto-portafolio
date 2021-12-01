@@ -233,6 +233,7 @@ header .menu-icon .offcanvas-content .offcanvas-body .copy {
   padding: 0;
   margin: 0;
   position: inherit;
+  z-index: 0;
 }
 .carousel .carousel-indicators [data-bs-target] {
   height: 10px;
